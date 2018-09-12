@@ -17,7 +17,7 @@ import (
 )
 
 func main() {
-	file, err := os.Open("customers.csv")
+	file, err := os.Open("customers.csv.gpg")
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
@@ -35,7 +35,7 @@ func main() {
 	fileContent := buf.Bytes()
 
 	// The file doesn't have the csv extension, we consider it is a GPG one
-	if !strings.HasSuffix("customers.csv", ".csv") {
+	if !strings.HasSuffix("customers.csv.gpg", ".csv") {
 		gpgEncrypter, err := NewGPGEncrypter1("dev-pgp.priv", "Toto1001")
 		if err != nil {
 			fmt.Println(err)
