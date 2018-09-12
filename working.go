@@ -16,7 +16,7 @@ import (
 	"golang.org/x/crypto/openpgp/packet"
 )
 
-func main() {
+func working() {
 	file, err := os.Open("customers.csv.gpg")
 	if err != nil {
 		fmt.Println(err)

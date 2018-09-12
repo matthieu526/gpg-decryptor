@@ -12,7 +12,7 @@ import (
 	"golang.org/x/crypto/openpgp"
 )
 
-func main2() {
+func notworking() {
 	var file io.ReadCloser
 	file, err := os.Open("customers.csv.gpg")
 	if err != nil {
